@@ -1,0 +1,169 @@
+.calendar-view {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.calendar-view-content {
+  padding: 2rem 0;
+}
+
+.calendar-view-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0 1.5rem 0;
+}
+
+.calendar-month-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+.calendar-nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.calendar-grid {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.weekday-header {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+  text-transform: uppercase;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-day {
+  min-height: 120px;
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+}
+
+.calendar-day.empty {
+  background-color: #f9fafb;
+}
+
+.calendar-day.other-month {
+  background-color: #f9fafb;
+  opacity: 0.5;
+}
+
+.calendar-day.has-trips {
+  background-color: #f0f9ff;
+}
+
+.day-number {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.day-trips {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow: hidden;
+}
+
+.trip-event {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.75rem;
+  color: #ffffff;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.trip-event:hover {
+  opacity: 0.8;
+}
+
+.trip-name {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .calendar-day {
+    min-height: 80px;
+    padding: 0.25rem;
+  }
+
+  .day-number {
+    font-size: 0.75rem;
+  }
+
+  .trip-event {
+    font-size: 0.625rem;
+    padding: 0.125rem 0.25rem;
+  }
+
+  .trip-name {
+    display: none;
+  }
+}
+
